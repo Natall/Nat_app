@@ -1,0 +1,21 @@
+<% provide(:title, @user.email) %>
+<div class="row">
+  <aside class="col-xs-6 col-md-4">
+    <section>
+      <h3>
+        <%= gravatar_for @user %>
+        <%= @user.email %>
+      </h3>
+    </section>
+    </aside>
+  <div class="col-xs-6 col-md-8">
+    <% if @user.phrases.any? %>
+        <h3>Phrases (<%= @user.phrases.count %>)</h3>
+        <ol class="phrases">
+          <%= render @phrases %>
+        </ol>
+        <%= will_paginate @phrases %>
+    <% end %>
+  </div>
+  </div>
+

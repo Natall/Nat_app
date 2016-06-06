@@ -1,0 +1,107 @@
+@import "bootstrap";
+
+/* universal */
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2 {
+  text-align: center;
+}
+h3 {
+  color: #640500;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-image: url("pip.jpg");
+  font-size: 15px;
+  font-family: "Andale Mono";
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #640500;
+  text-decoration: none;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -95px;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #640500;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: #060621;
+    text-decoration: none;
+  }
+}
+
+
+.logged {
+  color: #222222;
+  padding: 15px;
+}
+
+.timestamp{
+  text-decoration: underline;
+}
+
+/*navbar*/
+
+.navbar-nav > li > a {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+.navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  color: #2f221e;
+  &:hover {
+    color: #760011;
+    text-decoration: none;
+  }
+}
+
+.field {
+  text-align: center;
+
+}
+
+.actions{
+ text-align: center;
+}
+
+
+li {
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  color: #4d4d4d;
+  min-width: 230px;
+  max-width: 550px;
+  text-align: -webkit-match-parent;
+  margin: auto;
+  padding: inherit;
+  border-bottom: 1px solid #ededed;
+}

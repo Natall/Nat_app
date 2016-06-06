@@ -1,0 +1,10 @@
+<li>
+  <span class="content"><%= phrase.content %></span>
+  <span class="timestamp">
+    posted <%= time_ago_in_words(phrase.created_at) %> ago.
+  </span>
+  <% if current_user.id == phrase.user_id %>
+      <%= render 'shared/delete_link', object: phrase %>
+  <% end %>
+</li>
+

@@ -1,0 +1,19 @@
+<h1>New Phrase</h1>
+
+<div class="field">
+  <%= form_for @phrase do |f| %>
+      <p>
+        <%= f.label :content %><br>
+        <%= f.text_field :content %>
+      </p>
+      <%= f.select :category_id, Category.all.map{|x| [x.content, x.id] }, :prompt => "Select One" %>
+
+      <p>
+        <%= f.submit %>
+      </p>
+
+
+
+      </div>
+
+<%end%>
