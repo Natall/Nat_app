@@ -1,10 +1,26 @@
+<div class="phrase row">
+  <ul>
 <li>
+  <span class="label label-default label-as-badge"> likes <%= phrase.likes_rating %></span>
+  <div>
   <span class="content"><%= phrase.content %></span>
+  </div>
+<div>
+  <span class="content"><%= phrase.translation %></span>
+ </div>
+  <div>
+    <span class="content"><%= phrase.examples %></span>
+  </div>
   <span class="timestamp">
     posted <%= time_ago_in_words(phrase.created_at) %> ago.
   </span>
+
   <% if current_user.id == phrase.user_id %>
       <%= render 'shared/delete_link', object: phrase %>
   <% end %>
+
 </li>
+</ul>
+</div>
+
 

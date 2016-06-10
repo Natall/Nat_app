@@ -1,3 +1,35 @@
 // Place all the styles related to the phrases controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.phrase {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eee;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 10px;
+  box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.5);
+  .phrase-buttons {
+    border-right: 3px solid #000;
+    .counter {
+      width: 38px;
+      height: 20px;
+      text-align: center;
+      padding-top: 5px;
+
+    }
+    .like {
+
+    }
+    .dislike {
+
+    }
+  }
+
+  .phrase-text {
+   .phrase-content {
+     font-weight:bold;
+   }
+  }
+
+
+}

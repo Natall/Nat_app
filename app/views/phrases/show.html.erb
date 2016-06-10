@@ -1,5 +1,19 @@
 <p>
-  <strong>Content:</strong>
-  <%= @phrase.content %>
+<div class="row">
+
+  <%= @phrase.content.translation.examples %>
+
+  <!--<div>-->
+    <!--< @phrase.translation %>-->
+
+  <!--</div>-->
+
+  <% @phrase.examples.each do |example|%>
+
+      <li><%= example.content %> </li>
+
+  <%end%>
+
+</div>
 </p>
 

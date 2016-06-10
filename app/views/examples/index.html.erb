@@ -1,13 +1,10 @@
-<h1>All Phrases</h1>
-
-<%= will_paginate %>
-<% @phrases.each do |phrase|%>
-  <div class="phrase row" id="<%= phrase.id%>">
+<% @examples.each do |example|%>
+    <div class="phrase row" id="<%= phrase.id%>">
       <div class="col-md-1 phrase-buttons">
         <button class="btn btn-primary like" <%= 'disabled="disabled"' if current_user.liked? phrase%> >
           <i class="fa fa-thumbs-o-up"></i>
         </button>
-        <p class="counter"><%=phrase.likes_rating%></p>
+        <p class="counter"><%=example.likes_rating%></p>
         <button class="btn btn-danger dislike" <%= 'disabled="disabled"' if current_user.liked? phrase%>>
           <i class="fa fa-thumbs-o-down"></i>
         </button>
@@ -16,11 +13,6 @@
         <div class="phrase-content"><%=phrase.content%></div>
         <div class="phrase-content"><%=phrase.translation%></div>
       </div>
-  </div>
+    </div>
 
 <%end%>
-<%= will_paginate %>
-
-
-
-<!--<button class="btn btn-default btn-primary">LIKE</button>-->

@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'devise'
 gem 'will_paginate','~> 3.0.4'
+gem 'bootstrap-will_paginate'
+gem "font-awesome-rails"
 
 
 gem 'sdoc', '~> 0.4.0', group: :doc

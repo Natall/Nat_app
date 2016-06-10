@@ -6,6 +6,12 @@ class User < ActiveRecord::Base
 
   has_many :phrases, dependent: :destroy
   has_many :examples
-  has_many :likes
+  has_many :likes, dependent: :destroy
+
+
+  def liked? likeable
+    likeable.likes.where(user: self).any?
+  end
+
 
 end

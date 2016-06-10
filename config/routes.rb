@@ -1,4 +1,10 @@
 EngliApp::Application.routes.draw do
+  get 'examples/index'
+
+  get 'examples/show'
+
+  get 'likes/index'
+
   get 'categories/new'
 
   get 'categories/index'
@@ -11,6 +17,8 @@ EngliApp::Application.routes.draw do
 
   get 'users/new'
 
+
+
   devise_for :users
   get 'static_pages/welcome', to: 'static_pages#welcome', as: 'welcome'
   get 'static_pages/index'
@@ -18,6 +26,9 @@ EngliApp::Application.routes.draw do
   resources :users
   resources :phrases
   resources :categories
+  resources :likes
+  resources :examples
+
 
 
   root 'static_pages#welcome'

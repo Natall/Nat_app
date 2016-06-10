@@ -1,5 +1,7 @@
 <h1>Categories</h1>
-
+<div class="phrase row">
 <% @categories.each do |category|%>
     <li><%= link_to category.content, category_path(category)%> </li>
+
 <%end%>
+  </div>

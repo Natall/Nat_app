@@ -69,7 +69,7 @@ a {
 /*navbar*/
 
 .navbar-nav > li > a {
-  padding-right: 0;
+
   padding-left: 20px;
 }
 
@@ -94,14 +94,34 @@ a {
 }
 
 
-li {
-  background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-  color: #4d4d4d;
-  min-width: 230px;
-  max-width: 550px;
-  text-align: -webkit-match-parent;
+//li {
+//  background: #fff;
+//  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+//  color: #4d4d4d;
+//  min-width: 230px;
+//  max-width: 550px;
+//  text-align: -webkit-match-parent;
+//  margin: auto;
+//  padding: inherit;
+//  border-bottom: 1px solid #ededed;
+//}
+
+.pagination {
   margin: auto;
-  padding: inherit;
-  border-bottom: 1px solid #ededed;
+}
+
+.label-default {
+  background-color: #3b7777;
+  margin-right: 10px;
+
+}
+
+.header {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eee;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 10px;
+  box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.5);
+
 }

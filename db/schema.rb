@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601133845) do
+ActiveRecord::Schema.define(version: 20160610105942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160601133845) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.integer  "phrase_id"
+    t.text     "content",    null: false
   end
 
   add_index "examples", ["phrase_id"], name: "index_examples_on_phrase_id", using: :btree
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160601133845) do
     t.integer  "likeable_id"
     t.string   "likeable_type"
     t.integer  "value"
+    t.integer  "user_id"
   end
 
   add_index "likes", ["likeable_type", "likeable_id"], name: "index_likes_on_likeable_type_and_likeable_id", using: :btree
@@ -48,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160601133845) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
+    t.string   "translation"
   end
 
   add_index "phrases", ["category_id"], name: "index_phrases_on_category_id", using: :btree
