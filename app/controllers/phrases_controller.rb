@@ -3,7 +3,6 @@ class PhrasesController < ApplicationController
 
   def new
     @phrase = Phrase.new
-    # @phrase.examples.build
 
   end
 
@@ -11,6 +10,9 @@ class PhrasesController < ApplicationController
     @phrase = Phrase.new(phrase_params)
     @phrase.user = current_user
     if @phrase.save
+      examples = params[:phrase][:examples].map {|c| {:content => c} }
+      @phrase.examples.create examples
+
       redirect_to user_path current_user
     # else
     #   @feed_items = []
@@ -47,7 +49,7 @@ class PhrasesController < ApplicationController
   private
 
   def phrase_params
-    params.require(:phrase).permit(:content, :category_id, :example, :translation)
+    params.require(:phrase).permit(:content, :category_id, :translation)
   end
 
   def edit

@@ -7,45 +7,37 @@
         <%= f.text_field :content %>
       </p>
 
-      <p>
+      <p >
         <%= f.label :translation %><br>
         <%= f.text_field :translation %>
       </p>
 
-      <!--<p>-->
-        <!--%= f.label :example %><br>-->
-        <!--%= f.text_field :example %>-->
-      <!--</p>-->
 
       <p>
 
-        <!--% f.fields_for :example do |e| %><br/>-->
-      <%= f.label :example %><br/>
+        <%= f.label :example, id: 'example_label' %><br/>
 
-      <%= f.text_field :content %><br/>
+      <div id="items">
+        <div><input type="text" name="phrase[examples][]"></div>
+      </div>
+      </p>
 
-            <%= link_to 'add example', @example , remote: true %>
+      <p>
+      <button id="add">Add Example</button>
 
-
-        <!--% end %>-->
       </p>
 
       <p>
         <%= f.select :category_id, Category.all.map { |x| [x.content, x.id] }, :prompt => "Select One" %>
       </p>
+
       <p>
         <%= f.submit %>
       </p>
 
 
+  <% end %>
 
+</div>
 
-      <%end%>
-
-
-
-
-
-
-      </div>
-
+<%= javascript_include_tag('examples')%>

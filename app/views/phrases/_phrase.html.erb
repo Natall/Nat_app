@@ -9,7 +9,13 @@
   <span class="content"><%= phrase.translation %></span>
  </div>
   <div>
-    <span class="content"><%= phrase.examples %></span>
+    <ul>
+    <% phrase.examples.each do |example|%>
+
+        <li><%= example.content %> </li>
+
+    <%end%>
+      </ul>
   </div>
   <span class="timestamp">
     posted <%= time_ago_in_words(phrase.created_at) %> ago.

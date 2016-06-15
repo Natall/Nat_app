@@ -1,18 +1,18 @@
-<% @examples.each do |example|%>
-    <div class="phrase row" id="<%= phrase.id%>">
-      <div class="col-md-1 phrase-buttons">
-        <button class="btn btn-primary like" <%= 'disabled="disabled"' if current_user.liked? phrase%> >
-          <i class="fa fa-thumbs-o-up"></i>
-        </button>
-        <p class="counter"><%=example.likes_rating%></p>
-        <button class="btn btn-danger dislike" <%= 'disabled="disabled"' if current_user.liked? phrase%>>
-          <i class="fa fa-thumbs-o-down"></i>
-        </button>
-      </div>
-      <div class="col-md-10 phrase-text">
-        <div class="phrase-content"><%=phrase.content%></div>
-        <div class="phrase-content"><%=phrase.translation%></div>
-      </div>
-    </div>
+<!--% @examples.each do |example|%>-->
+    <!--<div class="phrase row" id="%= phrase.id%>">-->
+      <!--<div class="col-md-1 phrase-buttons">-->
+        <!--<button class="btn btn-primary like" %= 'disabled="disabled"' if current_user.liked? phrase%> >-->
+          <!--<i class="fa fa-thumbs-o-up"></i>-->
+        <!--</button>-->
+        <!--<p class="counter">%=example.likes_rating%></p>-->
+        <!--<button class="btn btn-danger dislike" %= 'disabled="disabled"' if current_user.liked? phrase%>>-->
+          <!--<i class="fa fa-thumbs-o-down"></i>-->
+        <!--</button>-->
+      <!--</div>-->
+      <!--<div class="col-md-10 phrase-text">-->
+        <!--<div class="phrase-content">%=phrase.content%></div>-->
+        <!--<div class="phrase-content">%=phrase.translation%></div>-->
+      <!--</div>-->
+    <!--</div>-->
 
-<%end%>
+<!--%end%>-->
